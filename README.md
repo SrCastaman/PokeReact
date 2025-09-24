@@ -41,5 +41,22 @@ PokeReact es una aplicación web creada con **React** que consume la **PokéAPI*
 5. La app se abrirá en http://localhost:3000
 
 
+## Deploy en vivo 🌐
+
+Puedes ver la aplicación funcionando online en el siguiente enlace:
+
+[PokeReact en Vercel](https://poke-react-sigma.vercel.app)
+
+
+
+
+## Capturas de pantalla
+
+![Lista de Pokemons](./src/assets/screenshots/captura%201.png)
+![Funcionalidad del buscador](./src/assets/screenshots/captura%202.png)
+![Funcionalidad del filtro de generaciones](./src/assets/screenshots/captura%203.png)
+![Detalles del Pokemon seleccionado](./src/assets/screenshots/captura%204.png)
+
+
 
 Autor: SrCastaman
