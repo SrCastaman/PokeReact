@@ -12,7 +12,7 @@ function PokemonDetail({ pokemon, onBack}) {
 
 
     return (
-        <div className="max-w-md mx-auto bg-gray-100 p-6 rounded-xl shadow-md text-center">
+        <div className="max-w-md mx-auto bg-gray-800 p-6 rounded-xl shadow-md text-center">
             <img
                 src={sprites?.front_default || ""}
                 alt={name}

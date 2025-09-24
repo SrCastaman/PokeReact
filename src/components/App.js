@@ -98,7 +98,7 @@ function App() {
   
 
   return (
-    <div className="p-6">
+    <div className="p-6 bg-gray-900 min-h-screen text-white">
 
       {/*TITULO*/ }
 
@@ -123,13 +123,13 @@ function App() {
         <>
           {/*BARRA DE BUSQUEDA*/}
           <div className="flex justify-center mb-6">
-            <input type="text" placeholder="Buscar Pokemon..." value={search} onChange={(e) => setSearch(e.target.value)} className="px-4 py-2 border rounded w-64"/>
+            <input type="text" placeholder="Buscar Pokemon..." value={search} onChange={(e) => setSearch(e.target.value)} className="px-4 py-2 border rounded w-64 bg-gray-800"/>
           </div>
 
           <div className="flex justify-center mb-6">
             
             {/*SELECT DE GENERACION*/}
-            <select value={selectedGen} onChange={(e) => setSelectedGen(e.target.value)} className="px-4 py-2 border rounded">
+            <select value={selectedGen} onChange={(e) => setSelectedGen(e.target.value)} className="px-4 py-2 border rounded bg-gray-800">
               <option value="all">Todas las generaciones</option>
               <option value="1">Gen 1</option>
               <option value="2">Gen 2</option>
@@ -148,7 +148,7 @@ function App() {
             {paginatedPokemons.map((poke) => (
               <li
                 key={poke.id}
-                className="bg-gray-100 p-4 rounded-xl shadow-md hover:shadow-xl hover:bg-yellow-200 transition cursor-pointer text-center"
+                className="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-xl hover:bg-yellow-200 transition cursor-pointer text-center"
                 onClick={() => handleClick(poke)}
               >
                 <img
@@ -156,7 +156,7 @@ function App() {
                   alt={poke.name}
                   className="mx-auto mb-2 w-20 h-20"
                 />
-                <span className="capitalize font-medium">{poke.name}</span>
+                <span className="capitalize font-medium text-white">{poke.name}</span>
               </li>
             ))}
           </ul>
@@ -164,14 +164,14 @@ function App() {
           {/* PAGINACION*/}
           <div className="flex justify-center gap-4 mt-6">
             <button
-              className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+              className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-800"
               onClick={() => setOffset(Math.max(0, offset - limit))}
               disabled={offset === 0}
             >
               Anterior
             </button>
             <button
-              className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+              className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-800"
               onClick={() => setOffset(offset + limit < filteredPokemons.length ? offset + limit : offset)}
               disabled={offset + limit >= filteredPokemons.length}
             >
